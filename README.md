@@ -5,3 +5,6 @@ To run the project in your local machine, execute the following two commands `in
 - npm install
 - npm start
 
+
+New line
+
