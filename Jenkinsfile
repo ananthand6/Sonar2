@@ -1,12 +1,14 @@
 pipeline {
   agent any
+ 
   tools {nodejs "nodejs"}
+ 
   stages {
-     stage('SCM CHECKOUT') {
+    stage('Example') {
       steps {
         sh 'npm config ls'
-        echo 'Hiiii'
+        echo 'Hiii'
       }
     }
   }
-    }
+}
