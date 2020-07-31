@@ -4,14 +4,22 @@ pipeline {
   tools {nodejs "node"}
  
   stages {
-    stage('Example') {
+    stage('nodeinstall') {
       steps {
         sh 'npm config ls'
-        sh 'dir angular_todo'
-        sh 'npm install'
-        sh 'npm start'
-        echo 'Hiii'
+        echo 'Node installation step'
       }
     }
+    
+    stage('buildangularproject') {
+      steps {
+        dir ("angular_todo")
+        {
+        sh 'npm install'
+        sh 'npm start'
+        }
+      }
+    }
+    
   }
 }
