@@ -7,7 +7,7 @@ pipeline {
     stage('Example') {
       steps {
         sh 'npm config ls'
-        sh 'dir angular'
+        sh 'dir angular_todo'
         sh 'npm install'
         sh 'npm start'
         echo 'Hiii'
